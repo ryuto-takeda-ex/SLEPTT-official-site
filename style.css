@@ -1,0 +1,290 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding:15px 40px;
+    background: rgba (15,15,15,0.5);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index:1000;
+}
+.logo{
+    color:white;
+    font-size: 24px;
+    font-weight: bold;
+}
+ nav{
+    display:flex;
+    gap:30px;
+ }
+ nav a{
+    color:white;
+    text-decoration: none;
+ }
+ nav a:hover{
+    opacity:.7;
+ }
+ .social-links{
+    display: flex;
+    gap:20px;
+ }
+ .social-links a{
+    color: white;
+    font-size: 24px;
+    transition: .3s;
+
+ }
+ .social-links a:hover{
+    transform: translateY(-3px);
+    opacity:.7;
+ }
+.title{
+    transform: translate(-10px, -20px);
+}
+section {
+    min-height: 100vh;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.hero {
+    background-image: url(img/sleptt.jpg);
+    text-align: center;
+    background-position: center bottom;
+    padding-top: 10vh;
+}
+.hero p{
+     transform: translate(-10px, -20px);
+}
+.big {
+    font-size: 70px;
+}
+
+
+
+.intro {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding-top: 10vh;
+}
+.abt {
+     color: white;
+    font-size: 35px;
+    opacity: 0;
+    transform:translateY(20px);
+    transition: all 4s ease-out;
+    margin-bottom: 20px;
+    transform: translate(0px, 70px) !important;
+}
+.wis {
+    font-size: 20px;
+    color: white;
+    opacity: 0;
+    transform:translateY(20px);
+    transition: all 3.5s ease-out;
+    transform: translate(0px, 70px) !important;
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.videos {
+     background:#0a0a0a;
+    text-align: center;
+    padding-top: 100px;
+    
+    
+}
+.Tracks{
+    font-size:50px;
+    letter-spacing:8px;
+    color:transparent;
+    -webkit-text-stroke:0.5px white;
+    margin-bottom:70px;
+
+    opacity:0;
+    transform:translateY(20px);
+}
+@keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .Tracks.show{
+    animation:fadeIn 1.5s ease-in forwards;
+}
+.tracks {
+    display:flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.track-card{
+    width: 350px;
+    background: #111;
+    max-width: 350px;
+    overflow: hidden;
+    transition:.4s;
+}
+
+.track-card img{
+    width:100%;
+    display:block;
+}
+.track-info{
+    padding: 20px;
+    text-align: left;
+}
+.track-info h3{
+    color: white;
+    font-size: 22px;
+}
+.track-info p{
+    color: #888;
+    margin-top: 5px;
+}
+.track-card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.5);
+}
+
+
+
+.mission {
+     background-image: url(img/hayato.jpg);
+    text-align: center;
+     padding-top:10vw;
+}
+.MISSION {
+    color: white;
+    font-size: 60px;
+     margin-top:50px;
+    
+    opacity: 0;
+    transform: translateY(20px);
+
+    margin-bottom: 10px;
+
+}
+ .MISSION.show{
+    animation: fadeIn 1.5s ease-in forwards;
+ }
+.aim {
+    color: white;
+    font-size: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    margin-left: -20px;
+}
+ .aim.show{
+    animation: fadeIn 1.5s ease-in forwards;
+ }
+
+
+
+
+
+
+
+.contact{
+    text-align: center;
+    padding:120px 20px;
+    color:white;
+    background-color: black;
+}
+.Contact{
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+.Contact p{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.contact-btn{
+    display: inline-block;
+    padding:15px 40px;
+    border:1px solid white;
+    color:white;
+
+    text-decoration: none;
+
+    margin-top: 40px;
+
+    transition: 0.3s;
+}
+.contact-btn:hover{
+    background: white;
+    color:black;
+}
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+@media screen and (max-width:768px) {
+    header{
+        padding:15px 20px;
+        flex-direction: column;
+        gap:15px;
+    }
+    .hero{
+        padding-top:200px;
+    }
+    .big{
+        font-size: 45px;
+    
+    }
+    .MISSION{
+        font-size: 40px;
+
+    }
+    .aim{
+       font-size: 20px;
+    }
+    nav{
+        gap:15px;
+    }
+    nav a {
+        font-size: 14px;
+
+    }
+    .social-links{
+        gap:15px;
+    }
+    .social-links a{
+        font-size:20px;
+
+    }
+    
+}
